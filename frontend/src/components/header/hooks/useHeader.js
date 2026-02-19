@@ -1,6 +1,7 @@
 import { deleteSession } from "@/utils/auth";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 export const useHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,5 +18,6 @@ export const useHeader = () => {
     toggleMenu,
     handleLogout,
     isOpen,
+    setIsOpen,
   };
 };
