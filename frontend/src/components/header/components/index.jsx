@@ -7,7 +7,7 @@ import { CiBoxList } from "react-icons/ci";
 import { useHeader } from "../hooks/useHeader";
 
 export default function DashboardLayout({ children }) {
-  const {toggleMenu,handleLogout,isOpen} = useHeader();
+  const {toggleMenu,handleLogout,isOpen,setIsOpen} = useHeader();
 
   return (
     <div className="min-h-screen sm:flex bg-slate-50">
@@ -33,7 +33,7 @@ export default function DashboardLayout({ children }) {
             Overview
           </NavLink>
           <NavLink
-            href="/dashboard/products"
+            href="/products"
             icon={<CiBoxList />}
             onClick={() => setIsOpen(false)}
           >
