@@ -1,4 +1,3 @@
-
 export async function getProducts() {
   const baseUrl = process.env.PRODUCT_URL;
   const res = await fetch(`${baseUrl}`, {
@@ -12,4 +11,16 @@ export async function getProducts() {
 
   const data = await res.json();
   return data.products ?? [];
+}
+
+export async function getProductById(id) {
+  const baseUrl = process.env.PRODUCT_URL;
+
+  const res = await fetch(`${baseUrl}/${id}`, {
+    next: { revalidate: 60 },
+  });
+  // console.log("Fetching:", `${baseUrl}/${id}`);
+
+  if (!res.ok) return null;
+  return res.json();
 }

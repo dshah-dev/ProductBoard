@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 
-export function middleware(request) {
+export function proxy(request) {
   const token = request.cookies.get("auth_token");
   const { pathname } = request.nextUrl;
 
-  if (!token && (pathname.startsWith("/dashboard") || pathname.startsWith("/products"))) {
+  if (!token && (pathname.startsWith("/dashboard") || pathname.startsWith("/cart"))) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
@@ -16,5 +16,5 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/products/:path*", "/login"],
+  matcher: ["/dashboard/:path*", "/cart/:path*", "/login"],
 };

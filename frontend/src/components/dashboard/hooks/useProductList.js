@@ -10,7 +10,7 @@ export const useProductList = (initialProducts = []) => {
   const debouncedSearch = useDebounce(search, 500);
 
   const categories = useMemo(() => {
-    const unique = new Set(initialProducts.map((p) => p.category));
+    const unique = new Set(initialProducts.map((p) => p?.category));
     return ["all", ...unique];
   }, [initialProducts]);
   const searchLower = debouncedSearch.toLowerCase();
@@ -18,7 +18,7 @@ export const useProductList = (initialProducts = []) => {
     return initialProducts.filter((product) => {
       const matchCategory = category === "all" || product?.category === category;
 
-      const matchSearch = product.title
+      const matchSearch = product?.title
         ?.toLowerCase()
         .includes(searchLower);
 

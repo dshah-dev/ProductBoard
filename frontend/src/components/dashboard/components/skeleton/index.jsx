@@ -1,4 +1,4 @@
-import Skeleton from "@/common/components/Skeleton";
+import Skeleton from "@/common/components/skeleton";
 
 export default function DashboardLoading() {
   return (
@@ -10,7 +10,10 @@ export default function DashboardLoading() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[1, 2, 3].map((i) => (
-          <div key={i} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+          <div
+            key={i}
+            className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm"
+          >
             <Skeleton width="100px" height="16px" className="mb-4" />
             <Skeleton width="60px" height="32px" />
           </div>

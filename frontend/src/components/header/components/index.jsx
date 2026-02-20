@@ -2,8 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { FaHome, FaBars, FaTimes } from "react-icons/fa";
-import { CiBoxList } from "react-icons/ci";
+import { FaHome, FaBars, FaTimes ,FaShoppingCart } from "react-icons/fa";
 import { useHeader } from "../hooks/useHeader";
 
 export default function DashboardLayout({ children }) {
@@ -33,11 +32,11 @@ export default function DashboardLayout({ children }) {
             Overview
           </NavLink>
           <NavLink
-            href="/products"
-            icon={<CiBoxList />}
+            href="/cart"
+            icon={<FaShoppingCart />}
             onClick={() => setIsOpen(false)}
           >
-            Products
+            Cart
           </NavLink>
           <NavLink
             href="/login"

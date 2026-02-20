@@ -3,8 +3,8 @@
 import React from "react";
 import { LOGIN_FIELDS } from "../constant/index";
 import { useLogin } from "../hooks/useLogin";
-import Button from "@/common/components/Button";
-import DynamicFormController from "@/common/components/DynamicFormController";
+import Button from "@/common/components/button/index";
+import DynamicFormController from "@/common/components/dynamicFormController/index";
 
 export default function LoginPage() {
   const { control, errors, handleLogin } = useLogin();

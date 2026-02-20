@@ -1,4 +1,4 @@
-import { getProducts } from "@/services/productService";
+import { getProducts } from "@/services/productServices/index";
 import UpperBoard from "./main";
 const dashboard = async () => {
   const products = await getProducts();
