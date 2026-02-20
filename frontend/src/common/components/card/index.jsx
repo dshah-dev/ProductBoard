@@ -9,7 +9,7 @@ export default function ProductCard({ id, title, price, thumbnail, category }) {
           src={thumbnail}
           alt={title}
           fill
-          loading="eager"
+          priority
           className="hover:scale-105 duration-500 object-cover "
           sizes=" (max-width: 768px) 100vw, 33vw"
         />
@@ -19,14 +19,14 @@ export default function ProductCard({ id, title, price, thumbnail, category }) {
         <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">
           {category}
         </span>
-        <h2 className="font-bold text-slate-800 text-md mt-1 truncate ">
+        <h2 className="font-bold text-slate-800 text-md mt-1 truncate">
           {title}
         </h2>
         <div className="mt-4 flex justify-between items-center">
           <span className="text-xl font-bold text-slate-900">${price}</span>
           <Link
             href={`/dashboard/products/${id}`}
-            className="text-sm font-medium text-blue-600 group-hover:underline"
+            className="text-sm font-medium text-blue-600 hover:underline"
           >
             Details
           </Link>

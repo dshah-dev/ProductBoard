@@ -1,4 +1,4 @@
-import ProductCard from "@/common/components/Card";
+import ProductCard from "@/common/components/card";
 // import { Suspense } from "react";
 export default function ProductList({ initialProducts = [] }) {
   if (initialProducts.length === 0) {

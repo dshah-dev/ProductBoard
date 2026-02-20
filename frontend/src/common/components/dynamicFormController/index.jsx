@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Input from "./Input";
+import Input from "../input/index";
 import { Controller } from "react-hook-form";
 
 const DynamicFormController = ({ control, config, errors }) => {
