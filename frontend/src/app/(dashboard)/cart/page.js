@@ -1,2 +1,2 @@
-import dashboard from "@/components/dashboard/components/index";
-export default dashboard;
+import CartPage from "@/components/cart/components/index";
+export default CartPage;

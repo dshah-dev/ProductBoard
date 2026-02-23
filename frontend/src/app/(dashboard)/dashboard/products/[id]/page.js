@@ -29,21 +29,3 @@ export default async function ProductDetailPage({ params }) {
 
   return <ProductDetail product={product} />;
 }
-
-// import { notFound } from "next/navigation";
-// import { getProductById } from "@/services/productServices";
-// import ProductDetail from "@/components/product/components/productDetails";
-
-// export const dynamic = "force-dynamic";
-
-// export default async function ProductDetailPage({ params }) {
-//   const { id } = await params;
-
-//   const product = await getProductById(id);
-
-//   if (!product) {
-//     notFound();
-//   }
-
-//   return <ProductDetail product={product} />;
-// }

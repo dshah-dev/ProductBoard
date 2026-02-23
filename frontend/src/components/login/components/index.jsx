@@ -25,10 +25,11 @@ export default function LoginPage() {
             config={LOGIN_FIELDS}
             errors={errors}
           />
-
-          <Button type="submit" className="btn-auth mt-2">
+          <div className="flex justify-center ">
+          <Button type="submit" className="w-full btn-auth mt-2">
             Sign In
           </Button>
+          </div>
         </form>
       </div>
     </div>
